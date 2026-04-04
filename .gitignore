@@ -1,0 +1,44 @@
+# Visual Studio
+.vs/
+.vscode/
+
+# Build folders
+Debug/
+Release/
+x64/
+x86/
+out/
+build/
+
+# Intermediate files
+*.obj
+*.o
+*.ilk
+*.pdb
+*.idb
+*.ipch
+*.pch
+
+# Logs
+*.log
+*.tlog
+
+# Databases / caches
+*.db
+*.db-shm
+*.db-wal
+
+# Visual Studio specific
+*.VC.db
+*.VC.opendb
+*.suo
+
+# Copilot / temp
+CopilotIndices/
+FileContentIndex/
+
+# Other
+*.exe
+*.dll
+*.lib
+*.exp
