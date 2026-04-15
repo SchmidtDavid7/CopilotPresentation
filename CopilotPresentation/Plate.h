@@ -43,7 +43,8 @@ public:
     [[nodiscard]] double flexuralRigidity() const
     {
         const auto thicknessCubed = thickness * thickness * thickness;
-        return (youngsModulus * thicknessCubed) / (12.0 * (1.0 - (poissonsRatio * poissonsRatio)));
+        constexpr auto plateRigidityFactor = 12.0;
+        return (youngsModulus * thicknessCubed) / (plateRigidityFactor * (1.0 - (poissonsRatio * poissonsRatio)));
     }
 
     std::string id;

@@ -45,8 +45,8 @@ public:
             sumZ += point.z;
         }
 
-        const auto pointCountAsDouble = static_cast<double>(boundaryPoints.size());
-        return Point3D(sumX / pointCountAsDouble, sumY / pointCountAsDouble, sumZ / pointCountAsDouble);
+        const auto numberOfPoints = static_cast<double>(boundaryPoints.size());
+        return Point3D(sumX / numberOfPoints, sumY / numberOfPoints, sumZ / numberOfPoints);
     }
 
     [[nodiscard]] Point3D minPoint() const
@@ -107,6 +107,7 @@ public:
         }
 
         auto signedArea = 0.0;
+        // Shoelace formula on the XY projection of boundary points.
         for (std::size_t i = 0; i < boundaryPoints.size(); ++i)
         {
             const auto& current = boundaryPoints[i];

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cmath>
+#include <numbers>
 #include <stdexcept>
 #include <string>
 
@@ -9,6 +10,8 @@
 class Column
 {
 public:
+    static constexpr double pi = std::numbers::pi_v<double>;
+
     Column() = default;
 
     Column(
@@ -46,7 +49,6 @@ public:
             throw std::invalid_argument("Effective column length must be greater than zero.");
         }
 
-        constexpr auto pi = 3.14159265358979323846;
         return (pi * pi * youngsModulus * momentOfInertia) / (effectiveLength * effectiveLength);
     }
 
