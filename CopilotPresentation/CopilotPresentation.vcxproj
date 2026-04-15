@@ -125,6 +125,15 @@
   <ItemGroup>
     <ClCompile Include="CopilotPresentation.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Beam.h" />
+    <ClInclude Include="Column.h" />
+    <ClInclude Include="Line3D.h" />
+    <ClInclude Include="Plate.h" />
+    <ClInclude Include="Point3D.h" />
+    <ClInclude Include="Region3D.h" />
+    <ClInclude Include="Wall.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
